@@ -1,0 +1,11 @@
+/Users/mpatrikovjr/Documents/GitHub/work/upenn_polymarket/sidecar/target/debug/deps/sec1-6409a62baaeba239.d: /Users/mpatrikovjr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/sec1-0.7.3/src/lib.rs /Users/mpatrikovjr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/sec1-0.7.3/src/point.rs /Users/mpatrikovjr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/sec1-0.7.3/src/error.rs /Users/mpatrikovjr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/sec1-0.7.3/src/parameters.rs /Users/mpatrikovjr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/sec1-0.7.3/src/private_key.rs /Users/mpatrikovjr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/sec1-0.7.3/src/traits.rs /Users/mpatrikovjr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/sec1-0.7.3/src/../README.md
+
+/Users/mpatrikovjr/Documents/GitHub/work/upenn_polymarket/sidecar/target/debug/deps/libsec1-6409a62baaeba239.rmeta: /Users/mpatrikovjr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/sec1-0.7.3/src/lib.rs /Users/mpatrikovjr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/sec1-0.7.3/src/point.rs /Users/mpatrikovjr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/sec1-0.7.3/src/error.rs /Users/mpatrikovjr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/sec1-0.7.3/src/parameters.rs /Users/mpatrikovjr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/sec1-0.7.3/src/private_key.rs /Users/mpatrikovjr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/sec1-0.7.3/src/traits.rs /Users/mpatrikovjr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/sec1-0.7.3/src/../README.md
+
+/Users/mpatrikovjr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/sec1-0.7.3/src/lib.rs:
+/Users/mpatrikovjr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/sec1-0.7.3/src/point.rs:
+/Users/mpatrikovjr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/sec1-0.7.3/src/error.rs:
+/Users/mpatrikovjr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/sec1-0.7.3/src/parameters.rs:
+/Users/mpatrikovjr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/sec1-0.7.3/src/private_key.rs:
+/Users/mpatrikovjr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/sec1-0.7.3/src/traits.rs:
+/Users/mpatrikovjr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/sec1-0.7.3/src/../README.md:

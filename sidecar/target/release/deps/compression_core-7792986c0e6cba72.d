@@ -1,0 +1,10 @@
+/Users/mpatrikovjr/Documents/GitHub/work/upenn_polymarket/sidecar/target/release/deps/compression_core-7792986c0e6cba72.d: /Users/mpatrikovjr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/compression-core-0.4.31/src/lib.rs /Users/mpatrikovjr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/compression-core-0.4.31/src/level.rs /Users/mpatrikovjr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/compression-core-0.4.31/src/unshared.rs /Users/mpatrikovjr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/compression-core-0.4.31/src/util.rs
+
+/Users/mpatrikovjr/Documents/GitHub/work/upenn_polymarket/sidecar/target/release/deps/libcompression_core-7792986c0e6cba72.rlib: /Users/mpatrikovjr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/compression-core-0.4.31/src/lib.rs /Users/mpatrikovjr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/compression-core-0.4.31/src/level.rs /Users/mpatrikovjr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/compression-core-0.4.31/src/unshared.rs /Users/mpatrikovjr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/compression-core-0.4.31/src/util.rs
+
+/Users/mpatrikovjr/Documents/GitHub/work/upenn_polymarket/sidecar/target/release/deps/libcompression_core-7792986c0e6cba72.rmeta: /Users/mpatrikovjr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/compression-core-0.4.31/src/lib.rs /Users/mpatrikovjr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/compression-core-0.4.31/src/level.rs /Users/mpatrikovjr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/compression-core-0.4.31/src/unshared.rs /Users/mpatrikovjr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/compression-core-0.4.31/src/util.rs
+
+/Users/mpatrikovjr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/compression-core-0.4.31/src/lib.rs:
+/Users/mpatrikovjr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/compression-core-0.4.31/src/level.rs:
+/Users/mpatrikovjr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/compression-core-0.4.31/src/unshared.rs:
+/Users/mpatrikovjr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/compression-core-0.4.31/src/util.rs:

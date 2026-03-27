@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pip install:*)",
+      "Bash(pip3 install:*)",
+      "Bash(/opt/homebrew/bin/python3.11 -m pip install -r requirements.txt)",
+      "Bash(/opt/homebrew/bin/python3.11 -m pytest tests/ -v)",
+      "Bash(/opt/homebrew/bin/python3.11 scripts/run_backtest.py)",
+      "Bash(/opt/homebrew/bin/python3.11 -m pytest tests/ -v --tb=short)",
+      "Bash(/opt/homebrew/bin/python3.11 -c \":*)",
+      "Bash(/opt/homebrew/bin/python3.11 scripts/demo.py)",
+      "WebFetch(domain:arena.ai)",
+      "Bash(cargo build:*)",
+      "Bash(rustup update:*)",
+      "Bash(cargo fix:*)",
+      "Bash(chmod +x /Users/mpatrikovjr/Documents/GitHub/work/upenn_polymarket/scripts/start_sidecar.sh)",
+      "Bash(python3 -c \":*)",
+      "Bash(python3 -m pytest tests/test_elo_model.py tests/test_avellaneda_stoikov.py tests/test_inventory_manager.py tests/test_arena_scraper.py -v)",
+      "Bash(python3 scripts/run_mm_backtest.py)",
+      "Bash(python3 scripts/run_mm_live.py --interval 30)",
+      "Bash(python3 -m pytest tests/test_elo_model.py tests/test_avellaneda_stoikov.py tests/test_inventory_manager.py tests/test_arena_scraper.py -v --tb=short)"
+    ]
+  }
+}

@@ -1,0 +1,8 @@
+/Users/mpatrikovjr/Documents/GitHub/work/upenn_polymarket/sidecar/target/debug/deps/alloy_signer_local-43d25c4517294de3.d: /Users/mpatrikovjr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/alloy-signer-local-1.8.3/src/lib.rs /Users/mpatrikovjr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/alloy-signer-local-1.8.3/src/error.rs /Users/mpatrikovjr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/alloy-signer-local-1.8.3/src/private_key.rs /Users/mpatrikovjr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/alloy-signer-local-1.8.3/src/../README.md
+
+/Users/mpatrikovjr/Documents/GitHub/work/upenn_polymarket/sidecar/target/debug/deps/liballoy_signer_local-43d25c4517294de3.rmeta: /Users/mpatrikovjr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/alloy-signer-local-1.8.3/src/lib.rs /Users/mpatrikovjr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/alloy-signer-local-1.8.3/src/error.rs /Users/mpatrikovjr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/alloy-signer-local-1.8.3/src/private_key.rs /Users/mpatrikovjr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/alloy-signer-local-1.8.3/src/../README.md
+
+/Users/mpatrikovjr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/alloy-signer-local-1.8.3/src/lib.rs:
+/Users/mpatrikovjr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/alloy-signer-local-1.8.3/src/error.rs:
+/Users/mpatrikovjr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/alloy-signer-local-1.8.3/src/private_key.rs:
+/Users/mpatrikovjr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/alloy-signer-local-1.8.3/src/../README.md:

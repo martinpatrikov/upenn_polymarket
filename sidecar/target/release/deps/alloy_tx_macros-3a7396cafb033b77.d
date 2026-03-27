@@ -1,0 +1,9 @@
+/Users/mpatrikovjr/Documents/GitHub/work/upenn_polymarket/sidecar/target/release/deps/alloy_tx_macros-3a7396cafb033b77.d: /Users/mpatrikovjr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/alloy-tx-macros-1.8.3/src/lib.rs /Users/mpatrikovjr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/alloy-tx-macros-1.8.3/src/expand.rs /Users/mpatrikovjr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/alloy-tx-macros-1.8.3/src/parse.rs /Users/mpatrikovjr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/alloy-tx-macros-1.8.3/src/serde.rs /Users/mpatrikovjr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/alloy-tx-macros-1.8.3/src/../README.md
+
+/Users/mpatrikovjr/Documents/GitHub/work/upenn_polymarket/sidecar/target/release/deps/liballoy_tx_macros-3a7396cafb033b77.dylib: /Users/mpatrikovjr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/alloy-tx-macros-1.8.3/src/lib.rs /Users/mpatrikovjr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/alloy-tx-macros-1.8.3/src/expand.rs /Users/mpatrikovjr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/alloy-tx-macros-1.8.3/src/parse.rs /Users/mpatrikovjr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/alloy-tx-macros-1.8.3/src/serde.rs /Users/mpatrikovjr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/alloy-tx-macros-1.8.3/src/../README.md
+
+/Users/mpatrikovjr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/alloy-tx-macros-1.8.3/src/lib.rs:
+/Users/mpatrikovjr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/alloy-tx-macros-1.8.3/src/expand.rs:
+/Users/mpatrikovjr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/alloy-tx-macros-1.8.3/src/parse.rs:
+/Users/mpatrikovjr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/alloy-tx-macros-1.8.3/src/serde.rs:
+/Users/mpatrikovjr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/alloy-tx-macros-1.8.3/src/../README.md:

@@ -1,0 +1,9 @@
+/Users/mpatrikovjr/Documents/GitHub/work/upenn_polymarket/sidecar/target/release/deps/alloy_rlp_derive-e6b8c6cc9d18ba97.d: /Users/mpatrikovjr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/alloy-rlp-derive-0.3.13/src/lib.rs /Users/mpatrikovjr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/alloy-rlp-derive-0.3.13/src/de.rs /Users/mpatrikovjr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/alloy-rlp-derive-0.3.13/src/en.rs /Users/mpatrikovjr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/alloy-rlp-derive-0.3.13/src/utils.rs /Users/mpatrikovjr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/alloy-rlp-derive-0.3.13/src/../README.md
+
+/Users/mpatrikovjr/Documents/GitHub/work/upenn_polymarket/sidecar/target/release/deps/liballoy_rlp_derive-e6b8c6cc9d18ba97.dylib: /Users/mpatrikovjr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/alloy-rlp-derive-0.3.13/src/lib.rs /Users/mpatrikovjr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/alloy-rlp-derive-0.3.13/src/de.rs /Users/mpatrikovjr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/alloy-rlp-derive-0.3.13/src/en.rs /Users/mpatrikovjr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/alloy-rlp-derive-0.3.13/src/utils.rs /Users/mpatrikovjr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/alloy-rlp-derive-0.3.13/src/../README.md
+
+/Users/mpatrikovjr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/alloy-rlp-derive-0.3.13/src/lib.rs:
+/Users/mpatrikovjr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/alloy-rlp-derive-0.3.13/src/de.rs:
+/Users/mpatrikovjr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/alloy-rlp-derive-0.3.13/src/en.rs:
+/Users/mpatrikovjr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/alloy-rlp-derive-0.3.13/src/utils.rs:
+/Users/mpatrikovjr/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/alloy-rlp-derive-0.3.13/src/../README.md:
