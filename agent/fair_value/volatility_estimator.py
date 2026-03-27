@@ -1,16 +1,29 @@
 """Volatility estimation for the Avellaneda-Stoikov model.
 
-Estimates per-outcome price volatility from ELO uncertainty,
-translated into probability space.
+Estimates per-outcome price volatility combining ELO-implied volatility
+with empirical prediction market volatility floors.
 
-Key formula:
-    sigma_p = p * (1 - p) / tau_eff * sigma_elo
+In prediction markets, prices move from:
+1. ELO score changes (captured by dp/dE * sigma_elo)
+2. News/sentiment shifts (not captured by ELO)
+3. Liquidity events (not captured by ELO)
+
+We use max(elo_implied, empirical_floor) to ensure the A-S model
+quotes realistically wide spreads and reacts to inventory.
 """
 
 import math
 import logging
 
 logger = logging.getLogger(__name__)
+
+# Empirical daily volatility for prediction market outcomes.
+# Based on observed Polymarket price movements:
+# - Outcomes near 50%: ~5-8% daily moves
+# - Outcomes near 10%: ~2-4% daily moves
+# - Outcomes near 1%:  ~0.5-1% daily moves
+# These are floors — actual volatility can be higher.
+EMPIRICAL_SIGMA_FLOOR = 0.03
 
 
 class VolatilityEstimator:
@@ -19,7 +32,7 @@ class VolatilityEstimator:
     def __init__(
         self,
         sigma_elo_daily: float = 10.0,
-        min_sigma: float = 0.01,
+        min_sigma: float = 0.02,
         max_sigma: float = 0.20,
     ):
         self.sigma_elo_daily = sigma_elo_daily
@@ -33,29 +46,28 @@ class VolatilityEstimator:
     ) -> dict[str, float]:
         """Estimate volatility for each outcome.
 
-        Uses ELO-implied volatility translated to probability space:
-            sigma_p = p * (1 - p) / tau_eff * sigma_elo
+        Combines:
+        1. ELO-implied: sigma = p*(1-p)/tau_eff * sigma_elo
+        2. Empirical floor: scales with p*(1-p) (most volatile near 50%)
 
-        This naturally gives:
-        - Higher volatility for outcomes near 50%
-        - Lower volatility for extreme outcomes (near 0% or 100%)
-
-        Args:
-            probabilities: {outcome: probability}
-            tau_eff: Effective temperature from ELO model.
-
-        Returns:
-            {outcome: sigma} clamped to [min_sigma, max_sigma]
+        Uses the max of both to capture all sources of price movement.
         """
         sigmas = {}
         for outcome, prob in probabilities.items():
-            # dp/dE for softmax: p * (1 - p) / tau
+            # ELO-implied volatility
             dp_dE = prob * (1.0 - prob) / tau_eff
-            sigma_p = dp_dE * self.sigma_elo_daily
+            sigma_elo = dp_dE * self.sigma_elo_daily
+
+            # Empirical floor: prediction markets have baseline volatility
+            # that scales with p*(1-p) — outcomes near 50% are most volatile
+            sigma_empirical = EMPIRICAL_SIGMA_FLOOR + 0.10 * prob * (1.0 - prob)
+
+            # Use the higher estimate
+            sigma = max(sigma_elo, sigma_empirical)
 
             # Clamp
-            sigma_p = max(self.min_sigma, min(self.max_sigma, sigma_p))
-            sigmas[outcome] = sigma_p
+            sigma = max(self.min_sigma, min(self.max_sigma, sigma))
+            sigmas[outcome] = sigma
 
         return sigmas
 
@@ -63,10 +75,7 @@ class VolatilityEstimator:
         self,
         price_history: list[float],
     ) -> float:
-        """Estimate volatility from a series of prices (optional).
-
-        Uses standard deviation of log returns.
-        """
+        """Estimate volatility from a series of prices."""
         if len(price_history) < 3:
             return self.min_sigma
 

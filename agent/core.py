@@ -154,7 +154,12 @@ class MarketMakingAgent:
         console.print(f"\n  Days to expiry: {days_to_expiry:.1f}")
 
         # Step 5: Compute base fair values from ELO
-        base_probs = self.elo_model.compute_probabilities(company_elos, days_to_expiry)
+        elo_probs = self.elo_model.compute_probabilities(company_elos, days_to_expiry)
+
+        # Step 5b: Blend ELO probabilities with market prices
+        # Market prices capture info our ELO model misses (upcoming releases, sentiment)
+        gamma_prices = {o["name"]: o.get("price", 0.0) for o in event.outcomes}
+        base_probs = self.elo_model.blend_with_market(elo_probs, gamma_prices, days_to_expiry)
 
         # Step 6: Fetch and process signals
         raw_signals = self.twitter.fetch_all_signals()
@@ -177,13 +182,12 @@ class MarketMakingAgent:
         # Step 7: Adjust fair values with signals
         adjusted_probs = self.signal_adjuster.adjust_probabilities(base_probs, processed_signals)
 
-        console.print(f"\n[bold]Fair Values[/] ({len(processed_signals)} signals processed):")
+        console.print(f"\n[bold]Fair Values[/] ({len(processed_signals)} signals, blended ELO+market):")
         for company in sorted(adjusted_probs, key=lambda x: -adjusted_probs[x]):
-            base = base_probs.get(company, 0)
+            elo_p = elo_probs.get(company, 0)
+            mkt_p = gamma_prices.get(company, 0)
             adj = adjusted_probs[company]
-            shift = adj - base
-            shift_str = f" ({shift:+.3f})" if abs(shift) > 0.001 else ""
-            console.print(f"  {company}: {adj:.4f}{shift_str}")
+            console.print(f"  {company}: {adj:.4f}  (elo={elo_p:.3f} mkt={mkt_p:.3f})")
 
         # Step 8: Estimate volatilities
         tau_eff = self.elo_model._effective_temperature(days_to_expiry)

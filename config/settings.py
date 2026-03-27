@@ -284,8 +284,9 @@ class Settings:
         self.log_level: str = os.getenv("LOG_LEVEL", "INFO")
 
         # --- Avellaneda-Stoikov parameters ---
-        self.as_gamma: float = float(os.getenv("AS_GAMMA", "0.1"))
-        self.as_kappa: float = float(os.getenv("AS_KAPPA", "1.5"))
+        # Calibrated for [0,1] prediction markets: ~4-8 cent spreads
+        self.as_gamma: float = float(os.getenv("AS_GAMMA", "0.5"))
+        self.as_kappa: float = float(os.getenv("AS_KAPPA", "40.0"))
         self.as_base_order_size: float = float(os.getenv("AS_BASE_ORDER_SIZE", "10.0"))
         self.as_max_inventory: float = float(os.getenv("AS_MAX_INVENTORY", "100.0"))
 

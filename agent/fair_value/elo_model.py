@@ -71,13 +71,62 @@ class EloFairValueModel:
 
         return probs
 
+    def blend_with_market(
+        self,
+        elo_probs: dict[str, float],
+        market_prices: dict[str, float],
+        days_to_expiry: float,
+        elo_weight_at_zero: float = 0.9,
+        elo_weight_at_max: float = 0.3,
+        max_days: float = 120.0,
+    ) -> dict[str, float]:
+        """Blend ELO-derived probabilities with market prices.
+
+        The market knows things our ELO model doesn't (upcoming releases,
+        insider sentiment, etc.). We blend the two views with a time-dependent
+        weight: closer to expiry, trust ELO more (it's more predictive);
+        further from expiry, lean more on market wisdom.
+
+        Args:
+            elo_probs: {company: probability} from ELO softmax.
+            market_prices: {company: YES token price} from Polymarket.
+            days_to_expiry: Days until resolution.
+            elo_weight_at_zero: ELO weight when days=0 (trust ELO at resolution).
+            elo_weight_at_max: ELO weight at max_days (lean toward market).
+
+        Returns:
+            Blended {company: probability} summing to 1.0.
+        """
+        if not market_prices:
+            return elo_probs
+
+        # Interpolate ELO weight based on time
+        t_frac = min(1.0, max(0.0, days_to_expiry) / max_days)
+        elo_w = elo_weight_at_zero + (elo_weight_at_max - elo_weight_at_zero) * t_frac
+        mkt_w = 1.0 - elo_w
+
+        blended = {}
+        for company in elo_probs:
+            elo_p = elo_probs[company]
+            mkt_p = market_prices.get(company, elo_p)
+            blended[company] = elo_w * elo_p + mkt_w * mkt_p
+
+        # Renormalize
+        total = sum(blended.values())
+        if total > 0:
+            blended = {c: p / total for c, p in blended.items()}
+
+        return blended
+
     def _effective_temperature(self, days_to_expiry: float) -> float:
         """Compute effective temperature.
 
         Far from expiry: high temperature -> probabilities pulled toward uniform.
         Close to expiry: base temperature -> ELO scores dominate.
+
+        Capped at tau_base + sigma*sqrt(60) to prevent extreme flattening.
         """
-        days = max(0.0, days_to_expiry)
+        days = max(0.0, min(days_to_expiry, 60.0))  # Cap sqrt scaling at 60 days
         return self.tau_base + self.sigma_elo_daily * math.sqrt(days)
 
     def extract_company_elos(

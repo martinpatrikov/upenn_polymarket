@@ -18,7 +18,10 @@
       "Bash(python3 -m pytest tests/test_elo_model.py tests/test_avellaneda_stoikov.py tests/test_inventory_manager.py tests/test_arena_scraper.py -v)",
       "Bash(python3 scripts/run_mm_backtest.py)",
       "Bash(python3 scripts/run_mm_live.py --interval 30)",
-      "Bash(python3 -m pytest tests/test_elo_model.py tests/test_avellaneda_stoikov.py tests/test_inventory_manager.py tests/test_arena_scraper.py -v --tb=short)"
+      "Bash(python3 -m pytest tests/test_elo_model.py tests/test_avellaneda_stoikov.py tests/test_inventory_manager.py tests/test_arena_scraper.py -v --tb=short)",
+      "Bash(python3 -m pytest tests/test_avellaneda_stoikov.py tests/test_elo_model.py tests/test_inventory_manager.py tests/test_arena_scraper.py -v --tb=short)",
+      "Bash(python3 -m pytest tests/ -v --tb=short)",
+      "Bash(python3 -m pytest tests/ -v)"
     ]
   }
 }
