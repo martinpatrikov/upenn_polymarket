@@ -128,6 +128,13 @@ class BacktestResult:
     num_trades: int
     win_rate: float
     max_drawdown: float
+    sharpe_ratio: float = 0.0
+    sortino_ratio: float = 0.0
+    profit_factor: float = 0.0
+    calmar_ratio: float = 0.0
+    avg_edge: float = 0.0
+    turnover: float = 0.0
+    event_snapshots: list[dict] = field(default_factory=list)
 
 
 # ---------------------------------------------------------------------------
