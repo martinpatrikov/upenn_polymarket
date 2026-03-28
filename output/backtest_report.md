@@ -1,6 +1,6 @@
 # Avellaneda-Stoikov Market Making Agent — Backtest Report
 
-_Generated: 2026-03-28 00:29 UTC_  
+_Generated: 2026-03-28 00:47 UTC_  
 _Market: Polymarket "Best AI Model" — Chatbot Arena Resolution_
 
 ## Executive Summary

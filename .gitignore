@@ -23,3 +23,5 @@ htmlcov/
 *.swp
 *.swo
 .DS_Store
+target/
+=3.8.0
