@@ -22,7 +22,23 @@
       "Bash(python3 -m pytest tests/test_avellaneda_stoikov.py tests/test_elo_model.py tests/test_inventory_manager.py tests/test_arena_scraper.py -v --tb=short)",
       "Bash(python3 -m pytest tests/ -v --tb=short)",
       "Bash(python3 -m pytest tests/ -v)",
-      "Bash(python3 scripts/run_mm_backtest.py --output-dir output)"
+      "Bash(python3 scripts/run_mm_backtest.py --output-dir output)",
+      "Bash(python3 -c \"import sys; sys.path.insert\\(0,''.''\\); from agent.core import MarketMakingAgent; print\\(''✓ agent.core imports OK''\\)\")",
+      "Bash(python3 -c \"from agent.fair_value.elo_model import EloModel; print\\(''✓ elo_model imports OK''\\)\")",
+      "Bash(python3 -c \"from agent.fair_value.elo_model import EloFairValueModel; print\\(''✓ elo_model imports OK''\\)\")",
+      "Bash(python3 -c \"from agent.market_making.avellaneda_stoikov import AvellanedaStoikov; print\\(''✓ avellaneda_stoikov imports OK''\\)\")",
+      "Bash(python3 -c \"from agent.market_making.quote_manager import QuoteManager; print\\(''✓ quote_manager imports OK''\\)\")",
+      "Bash(python3 -c \"from agent.fair_value.volatility_estimator import VolatilityEstimator; print\\(''✓ volatility_estimator imports OK''\\)\")",
+      "Bash(grep -r \"test_bayesian_engine\\\\|test_kelly_criterion\\\\|test_nlp_processor\\\\|test_signal_model\" --include=*.py .)",
+      "Bash(head -1 scripts/*.py scripts/*.sh)",
+      "Bash(while read:*)",
+      "Bash(do echo:*)",
+      "Bash(1 done:*)",
+      "Bash(grep -r \"os.getenv\\\\|os.environ\" --include=*.py .)",
+      "Bash(grep -r os.getenv --include=*.py .)",
+      "Bash(grep -r \"KELLY_FRACTION\\\\|MIN_EDGE_TO_TRADE\\\\|SIDECAR_HOST\" --include=*.py .)",
+      "Bash(python3:*)",
+      "Bash(grep -r \"BayesianEngine\\\\|KellyCriterion\" --include=*.py .)"
     ]
   }
 }
